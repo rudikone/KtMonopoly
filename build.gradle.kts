@@ -19,12 +19,19 @@ repositories {
 extra["testcontainersVersion"] = "1.17.4"
 
 dependencies {
+	//spring
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	//kotlin
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	//db
 	runtimeOnly("org.postgresql:postgresql")
+
+	//test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
