@@ -15,6 +15,7 @@ import javax.persistence.Table
 @SequenceGenerator(
     name = "seq_cell_id",
     sequenceName = "seq_cell_id",
+    allocationSize = 1,
 )
 data class Cell(
     @Id

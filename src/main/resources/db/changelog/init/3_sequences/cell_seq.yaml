@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_seq_cell_id
+      author: e.rudikov
+      changes:
+        - createSequence:
+            sequenceName: seq_cell_id

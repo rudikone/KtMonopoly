@@ -30,6 +30,11 @@ dependencies {
 
 	//db
 	runtimeOnly("org.postgresql:postgresql")
+	implementation("org.liquibase:liquibase-core:4.17.2")
+
+	//open-api
+	implementation("org.springdoc:springdoc-openapi-ui:1.6.12")
+	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
 
 	//test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

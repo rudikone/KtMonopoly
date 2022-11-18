@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_chip_table
+      author: e.rudikov
+      changes:
+        - createTable:
+            tableName: chip
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR
+              - column:
+                  name: position
+                  type: INTEGER
+              - column:
+                  name: balance
+                  type: BIGINT
+              - column:
+                  name: is_bankrupt
+                  type: BOOLEAN
+              - column:
+                  name: is_arrested
+                  type: BOOLEAN
+              - column:
+                  name: game_id
+                  type: BIGINT

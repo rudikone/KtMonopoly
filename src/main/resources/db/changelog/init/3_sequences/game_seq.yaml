@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_seq_game_id
+      author: e.rudikov
+      changes:
+        - createSequence:
+            sequenceName: seq_game_id

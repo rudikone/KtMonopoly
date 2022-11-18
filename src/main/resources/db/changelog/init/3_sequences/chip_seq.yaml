@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_seq_chip_id
+      author: e.rudikov
+      changes:
+        - createSequence:
+            sequenceName: seq_chip_id

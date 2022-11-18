@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - includeAll:
+      errorIfMissingOrEmpty: true
+      relativeToChangelogFile: true
+      path: init
+

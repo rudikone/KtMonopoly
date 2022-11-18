@@ -1,6 +1,13 @@
 spring:
   application:
     name: monopoly
+  datasource:
+    url: jdbc:postgresql://localhost:5432/monopoly
+    username: mnpl
+    password: passw0rd
+  jpa:
+    hibernate:
+      ddl-auto: none
 
 server:
   port: 8080
