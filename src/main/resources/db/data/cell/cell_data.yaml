@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_cells
+      author: e.rudikov
+      changes:
+        - sqlFile:
+            path: cell/sql/add_cells.sql
+            relativeToChangelogFile: true

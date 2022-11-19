@@ -24,5 +24,11 @@ databaseChangeLog:
                   name: renta
                   type: BIGINT
               - column:
+                  name: price
+                  type: BIGINT
+              - column:
+                  name: color
+                  type: VARCHAR
+              - column:
                   name: chip_id
                   type: BIGINT

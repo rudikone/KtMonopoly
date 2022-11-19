@@ -1,4 +1,4 @@
-CREATE USER mnpl WITH PASSWORD 'passw0rd';
+CREATE USER mnpl WITH PASSWORD 'monopoly';
 
 CREATE DATABASE monopoly;
 \c monopoly;

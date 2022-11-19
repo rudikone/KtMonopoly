@@ -3,4 +3,7 @@ databaseChangeLog:
       errorIfMissingOrEmpty: true
       relativeToChangelogFile: true
       path: init
+  - include:
+      file: /data/cell/cell_data.yaml
+      relativeToChangelogFile: true
 

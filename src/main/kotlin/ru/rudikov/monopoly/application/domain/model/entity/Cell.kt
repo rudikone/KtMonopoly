@@ -30,6 +30,8 @@ data class Cell(
     val number: Int,
     val salary: Long? = null,
     val renta: Long? = null,
+    val price: Long? = null,
+    val color: String? = null,
 
     @ManyToOne
     @JoinColumn(name = "chip_id")
