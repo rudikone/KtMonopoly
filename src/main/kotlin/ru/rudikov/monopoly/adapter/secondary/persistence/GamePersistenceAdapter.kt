@@ -1,4 +1,4 @@
-package ru.rudikov.monopoly.adapter.secondary
+package ru.rudikov.monopoly.adapter.secondary.persistence
 
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

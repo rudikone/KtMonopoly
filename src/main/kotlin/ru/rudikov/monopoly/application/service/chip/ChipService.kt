@@ -7,7 +7,7 @@ import ru.rudikov.monopoly.application.domain.model.dto.ChipDto
 class ChipService {
 
     fun createChips(chipNames: List<String>): List<ChipDto> = chipNames.map {
-        ChipDto(name = it, position = 0, balance = 0)
+        ChipDto(name = it, position = 0, balance = 1_500_000_000)
     }
 
 }

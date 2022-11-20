@@ -1,4 +1,4 @@
-package ru.rudikov.monopoly.adapter.secondary
+package ru.rudikov.monopoly.adapter.secondary.persistence
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
