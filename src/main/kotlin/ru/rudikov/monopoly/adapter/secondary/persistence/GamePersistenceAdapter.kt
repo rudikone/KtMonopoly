@@ -11,7 +11,7 @@ class GamePersistenceAdapter(
 ) : GameOutputPort {
 
     @Transactional
-    override fun saveGame(game: Game) {
-        repository.save(game)
-    }
+    override fun saveGame(game: Game) = repository.save(game)
+
+    override fun findGameById(id: Long): Game? = repository.findGameById(id)
 }

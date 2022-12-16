@@ -6,4 +6,6 @@ import ru.rudikov.monopoly.application.domain.model.entity.Game
 
 @Repository
 interface GameRepository : JpaRepository<Game, Long> {
+
+    fun findGameById(id: Long): Game?
 }
