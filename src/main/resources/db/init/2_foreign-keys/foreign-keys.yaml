@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: foreign-keys
+      author: e.rudikov
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: chip_id
+            baseTableName: cell
+            constraintName: cell_chip_fk
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: chip
+        - addForeignKeyConstraint:
+            baseColumnNames: game_id
+            baseTableName: chip
+            constraintName: chip_game_fk
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: game

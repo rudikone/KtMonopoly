@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: monopoly
+  datasource:
+    url: jdbc:postgresql://localhost:5432/monopoly
+    username: mnpl
+    password: monopoly
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog.yaml
+
+server:
+  port: 8080
+  servlet:
+    context-path: /${spring.application.name}
+
+

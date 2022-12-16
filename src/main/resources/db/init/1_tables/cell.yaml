@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_cell_table
+      author: e.rudikov
+      changes:
+        - createTable:
+            tableName: cell
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR
+              - column:
+                  name: number
+                  type: INTEGER
+              - column:
+                  name: salary
+                  type: BIGINT
+              - column:
+                  name: renta
+                  type: BIGINT
+              - column:
+                  name: price
+                  type: BIGINT
+              - column:
+                  name: color
+                  type: VARCHAR
+              - column:
+                  name: chip_id
+                  type: BIGINT

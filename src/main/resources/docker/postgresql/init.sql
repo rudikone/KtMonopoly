@@ -1,0 +1,11 @@
+CREATE USER mnpl WITH PASSWORD 'monopoly';
+
+CREATE DATABASE monopoly;
+\c monopoly;
+
+CREATE SCHEMA monopoly;
+ALTER DATABASE monopoly SET search_path TO monopoly;
+
+GRANT ALL PRIVILEGES ON DATABASE monopoly TO mnpl;
+GRANT ALL PRIVILEGES ON SCHEMA monopoly TO mnpl;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA monopoly TO mnpl;

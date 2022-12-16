@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: init_game_table
+      author: e.rudikov
+      changes:
+        - createTable:
+            tableName: game
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: who_next
+                  type: VARCHAR
