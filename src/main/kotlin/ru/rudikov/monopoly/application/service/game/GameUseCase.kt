@@ -11,20 +11,20 @@ import ru.rudikov.monopoly.port.secondary.GameOutputPort
 @Service
 class GameUseCase(
     private val gameEntityMapper: GameEntityMapper,
-    private val gamePersistenceAdapter: GameOutputPort,
+    private val gameOutputPort: GameOutputPort,
 ) : GameService {
 
     override fun startGame(chips: List<ChipDto>): GameDto {
         val gameDto = GameDto(chips = chips, whoNext = chips.random().name)
 
         val game = gameEntityMapper.toEntity(dto = gameDto)
-        gamePersistenceAdapter.saveGame(game = game)
+        gameOutputPort.saveGame(game = game)
 
         return gameDto
     }
 
     override fun checkAction(gameId: Long, chipName: String) {
-        val game = gamePersistenceAdapter.findGameById(id = gameId)
+        val game = gameOutputPort.findGameById(id = gameId)
             ?: throw NotFoundException(message = "Игра с id = $gameId не найдена!")
 
         if (game.whoNext != chipName) {
