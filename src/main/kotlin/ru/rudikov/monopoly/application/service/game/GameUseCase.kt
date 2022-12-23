@@ -1,11 +1,12 @@
 package ru.rudikov.monopoly.application.service.game
 
 import org.springframework.stereotype.Service
+import ru.rudikov.monopoly.adapter.secondary.persistence.game.GameEntityMapper
 import ru.rudikov.monopoly.application.domain.exception.NotFoundException
 import ru.rudikov.monopoly.application.domain.exception.ProcessException
 import ru.rudikov.monopoly.application.domain.model.dto.ChipDto
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
-import ru.rudikov.monopoly.application.port.secondary.GameOutputPort
+import ru.rudikov.monopoly.port.secondary.GameOutputPort
 
 @Service
 class GameUseCase(

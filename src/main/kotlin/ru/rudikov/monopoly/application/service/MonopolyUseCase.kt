@@ -2,7 +2,7 @@ package ru.rudikov.monopoly.application.service
 
 import org.springframework.stereotype.Service
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
-import ru.rudikov.monopoly.application.port.primary.MonopolyInputPort
+import ru.rudikov.monopoly.port.primary.MonopolyInputPort
 import ru.rudikov.monopoly.application.service.chip.ChipService
 import ru.rudikov.monopoly.application.service.game.GameService
 import kotlin.random.Random

@@ -1,9 +1,9 @@
-package ru.rudikov.monopoly.adapter.secondary.persistence
+package ru.rudikov.monopoly.adapter.secondary.persistence.game
 
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import ru.rudikov.monopoly.application.domain.model.entity.Game
-import ru.rudikov.monopoly.application.port.secondary.GameOutputPort
+import ru.rudikov.monopoly.port.secondary.GameOutputPort
 
 @Service
 class GamePersistenceAdapter(

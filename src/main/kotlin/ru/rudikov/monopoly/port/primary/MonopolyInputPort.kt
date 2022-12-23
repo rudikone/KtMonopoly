@@ -1,4 +1,4 @@
-package ru.rudikov.monopoly.application.port.primary
+package ru.rudikov.monopoly.port.primary
 
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
 

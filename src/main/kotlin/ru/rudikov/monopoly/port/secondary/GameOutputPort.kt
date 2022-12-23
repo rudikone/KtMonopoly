@@ -1,4 +1,4 @@
-package ru.rudikov.monopoly.application.port.secondary
+package ru.rudikov.monopoly.port.secondary
 
 import ru.rudikov.monopoly.application.domain.model.entity.Game
 

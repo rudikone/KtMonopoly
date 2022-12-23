@@ -1,9 +1,9 @@
-package ru.rudikov.monopoly.application.service.game
+package ru.rudikov.monopoly.adapter.secondary.persistence.game
 
 import org.springframework.stereotype.Service
+import ru.rudikov.monopoly.adapter.secondary.persistence.chip.toEntity
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
 import ru.rudikov.monopoly.application.domain.model.entity.Game
-import ru.rudikov.monopoly.application.service.chip.toEntity
 
 @Service
 class GameEntityMapper {

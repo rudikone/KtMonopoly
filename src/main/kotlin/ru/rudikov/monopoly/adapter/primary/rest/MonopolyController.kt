@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
-import ru.rudikov.monopoly.application.port.primary.MonopolyInputPort
+import ru.rudikov.monopoly.port.primary.MonopolyInputPort
 import javax.validation.constraints.Size
 
 @Validated
