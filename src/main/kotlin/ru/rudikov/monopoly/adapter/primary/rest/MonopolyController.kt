@@ -20,7 +20,7 @@ class MonopolyController(
         return ResponseEntity.status(HttpStatus.OK).body(response)
     }
 
-    @GetMapping("/game/{id}/chip/{name}/roll_the_dice")
+    @PostMapping("/game/{id}/chip/{name}/roll_the_dice")
     fun rollTheDice(@PathVariable id: Long, @PathVariable name: String): ResponseEntity<List<Int>> {
         val response = port.rollTheDice(gameId = id, chipName = name)
         return ResponseEntity.status(HttpStatus.OK).body(response)

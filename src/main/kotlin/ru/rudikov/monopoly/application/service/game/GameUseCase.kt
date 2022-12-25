@@ -2,6 +2,7 @@ package ru.rudikov.monopoly.application.service.game
 
 import org.springframework.stereotype.Service
 import ru.rudikov.monopoly.adapter.secondary.persistence.game.GameEntityMapper
+import ru.rudikov.monopoly.adapter.secondary.persistence.game.toDto
 import ru.rudikov.monopoly.application.domain.exception.NotFoundException
 import ru.rudikov.monopoly.application.domain.exception.ProcessException
 import ru.rudikov.monopoly.application.domain.model.dto.ChipDto
@@ -30,5 +31,12 @@ class GameUseCase(
         if (game.whoNext != chipName) {
             throw ProcessException(message = "Сейчас ход игрока с фишкой ${game.whoNext}!")
         }
+    }
+
+    override fun getGameById(gameId: Long): GameDto {
+        val game = gameOutputPort.findGameById(id = gameId)
+            ?: throw NotFoundException(message = "Игра с id = $gameId не найдена!")
+
+        return game.toDto()
     }
 }

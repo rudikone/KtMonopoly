@@ -14,6 +14,8 @@ databaseChangeLog:
               - column:
                   name: name
                   type: VARCHAR
+                  constraints:
+                    unique: true
               - column:
                   name: position
                   type: INTEGER
@@ -29,3 +31,6 @@ databaseChangeLog:
               - column:
                   name: game_id
                   type: BIGINT
+              - column:
+                  name: roll_result
+                  type: INTEGER[]

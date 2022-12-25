@@ -10,3 +10,10 @@ fun ChipDto.toEntity(game: Game): Chip = Chip(
     balance = this.balance,
     game = game
 )
+
+fun Chip.toDto() = ChipDto(
+    name = this.name,
+    position = this.position,
+    balance = this.balance,
+    isArrested = this.arrestedFlag,
+)

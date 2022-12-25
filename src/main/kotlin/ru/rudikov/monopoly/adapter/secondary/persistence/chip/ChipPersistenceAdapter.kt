@@ -10,4 +10,8 @@ class ChipPersistenceAdapter(
 ) : ChipOutputPort {
 
     override fun saveChips(chips: List<Chip>): List<Chip> = repository.saveAll(chips)
+
+    override fun getChipByName(name: String): Chip? = repository.findChipByName(name)
+
+    override fun saveChip(chip: Chip) : Chip = repository.save(chip)
 }
