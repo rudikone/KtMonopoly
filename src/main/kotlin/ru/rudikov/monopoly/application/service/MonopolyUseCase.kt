@@ -2,9 +2,9 @@ package ru.rudikov.monopoly.application.service
 
 import org.springframework.stereotype.Service
 import ru.rudikov.monopoly.application.domain.model.dto.GameDto
-import ru.rudikov.monopoly.application.port.primary.MonopolyInputPort
 import ru.rudikov.monopoly.application.service.chip.ChipService
 import ru.rudikov.monopoly.application.service.game.GameService
+import ru.rudikov.monopoly.port.primary.MonopolyInputPort
 import kotlin.random.Random
 
 @Service
@@ -22,6 +22,10 @@ class MonopolyUseCase(
     override fun rollTheDice(gameId: Long, chipName: String): List<Int> {
         gameService.checkAction(gameId = gameId, chipName = chipName)
 
-        return listOf(Random.nextInt(1, 6), Random.nextInt(1, 6))
+        val game = gameService.getGameById(gameId = gameId)
+        val rollResult = listOf(Random.nextInt(1, 6), Random.nextInt(1, 6))
+        chipService.saveRollResult(chipName = game.whoNext, rollResult = rollResult)
+
+        return rollResult
     }
 }

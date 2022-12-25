@@ -31,6 +31,8 @@ dependencies {
 	//db
 	runtimeOnly("org.postgresql:postgresql")
 	implementation("org.liquibase:liquibase-core:4.17.2")
+	implementation("com.vladmihalcea:hibernate-types-55:2.21.0")
+
 
 	//open-api
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.12")

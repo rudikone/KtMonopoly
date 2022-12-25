@@ -1,4 +1,4 @@
-package ru.rudikov.monopoly.application.service.chip
+package ru.rudikov.monopoly.adapter.secondary.persistence.chip
 
 import ru.rudikov.monopoly.application.domain.model.dto.ChipDto
 import ru.rudikov.monopoly.application.domain.model.entity.Chip
@@ -9,4 +9,11 @@ fun ChipDto.toEntity(game: Game): Chip = Chip(
     position = this.position,
     balance = this.balance,
     game = game
+)
+
+fun Chip.toDto() = ChipDto(
+    name = this.name,
+    position = this.position,
+    balance = this.balance,
+    isArrested = this.arrestedFlag,
 )
